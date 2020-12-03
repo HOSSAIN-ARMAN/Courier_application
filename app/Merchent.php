@@ -18,7 +18,7 @@ class Merchent extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'phone_number'
+        'name', 'mobile', 'otp_code','password'
     ];
 
     /**
@@ -35,7 +35,8 @@ class Merchent extends Authenticatable
      *
      * @var array
      */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+//    protected $casts = [
+//        'email_verified_at' => 'datetime',
+//    ];
+
 }

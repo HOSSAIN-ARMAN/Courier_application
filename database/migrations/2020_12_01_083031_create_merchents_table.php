@@ -16,9 +16,8 @@ class CreateMerchentsTable extends Migration
         Schema::create('merchents', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('phone_number');
+            $table->string('mobile')->unique();
+            $table->string('otp_code')->nullable();
             $table->string('password');
             $table->timestamps();
         });
