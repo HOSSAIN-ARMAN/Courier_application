@@ -220,15 +220,15 @@
                                             <label class="block clearfix">
 														<span class="block input-icon input-icon-right">
 															<input type="text" name="mobile" class="form-control" required placeholder="Mobile Number" />
-                                                            <button type="button" class="btn btn-info">Send OTP</button>
+                                                            <button type="button" class="btn btn-info" style="visibility: hidden">Send OTP</button>
 															<i class="ace-icon fa fa-mobile-phone"></i>
                                                              <span class="text-danger"> {{ $errors->has('mobile') ? $errors->first('mobile') : ' ' }}</span>
 														</span>
                                             </label>
                                             <label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="number" name="otp_code" class="form-control" placeholder="OTP" />
-															<i class="ace-icon fa fa-optin-monster"></i>
+															<input type="hidden" name="otp_code" class="form-control" placeholder="OTP" />
+{{--															<i class="ace-icon fa fa-optin-monster"></i>--}}
 														</span>
                                             </label>
 

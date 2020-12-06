@@ -14,9 +14,8 @@
         {{-- Dashboard --}}
         @include('merchent.partials.sidebar_modules.dashboard')
 
-         {{-- Admin --}}
-        @include('merchent.partials.sidebar_modules.admin')
-
+{{--        merchent-list--}}
+       @include('merchent.partials.sidebar_modules.merchent')
 
     </ul>
 

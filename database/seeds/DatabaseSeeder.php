@@ -12,5 +12,9 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
+        $this->call(DeliveryTableSeeder::class);
+        $this->call(DeliveryZoneTableSeeder::class);
+        $this->call(PickUpZoneTableSeeder::class);
+        $this->call(ParcelTyepTableSeeder::class);
     }
 }

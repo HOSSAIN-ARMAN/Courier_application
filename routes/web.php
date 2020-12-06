@@ -28,12 +28,7 @@ Route::prefix('admin')->group(function (){
 });
 
 
-Route::prefix('merchent')->group(function (){
-    Route::get('/login', 'Auth\MerchentLoginController@showLoginForm')->name('merchent.login');
-    Route::post('/login', 'Auth\MerchentLoginController@login')->name('merchent.login.submit');
-    Route::get('/', 'Merchent\MerchentController@index')->name('merchent.dashboard');
-    Route::post('/logout', 'Auth\MerchentLoginController@logout')->name('merchent.logout');
-    Route::post('/', 'Auth\MerchentRegistrationController@register')->name('merchent.register');
-});
+//route binding for parcel
+require_once __DIR__ . '/merchent/dashboard.php';  //for merchent dashboard
 
-
+require_once __DIR__ . '/merchent/parcel.php'; //add parcel

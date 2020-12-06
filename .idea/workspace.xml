@@ -20,210 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ba70c78-7334-413e-8643-99f3505b2f9d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/css/ace-ie.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/ace-part2.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/ace-rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/ace-skins.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/ace.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/bootstrap-colorpicker.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/bootstrap-datepicker3.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/bootstrap-datetimepicker.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/bootstrap-duallistbox.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/bootstrap-editable.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/bootstrap-multiselect.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/bootstrap-timepicker.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/chosen.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/colorbox.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/custom.chosen.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/daterangepicker.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/dropzone.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/font/summernote.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/font/summernote.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/font/summernote.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/font/summernote.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/fonts.googleapis.com.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/fullcalendar.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/images/meteorshower2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/images/pattern.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/jquery-ui.custom.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/jquery-ui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/jquery.gritter.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/prettify.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/select2.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/summernote.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/sweetalert2.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/ui.jqgrid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/font-awesome/4.5.0/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/font-awesome/4.5.0/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/font-awesome/4.5.0/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/font-awesome/4.5.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/font-awesome/4.5.0/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/font-awesome/4.5.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/avatar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/avatar1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/avatar2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/avatar3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/avatar4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/avatar5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/profile-pic.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/avatars/user.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/bootstrap-colorpicker/alpha-horizontal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/bootstrap-colorpicker/alpha.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/bootstrap-colorpicker/hue-horizontal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/bootstrap-colorpicker/hue.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/bootstrap-colorpicker/saturation.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/defult-img/admin-default-img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/email/email1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/email/email2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/email/email3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/email/email4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/gallery/image-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/gallery/image-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/gallery/image-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/gallery/image-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/gallery/image-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/gallery/image-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/gallery/thumb-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/gallery/thumb-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/gallery/thumb-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/gallery/thumb-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/gallery/thumb-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/gallery/thumb-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/placeholder/165x90.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/placeholder/255x150.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/placeholder/530x270.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/placeholder/550x280.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/ace-editable.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/ace-elements.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/ace-extra.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/ace.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/autosize.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/bootbox.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/bootstrap-colorpicker.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/bootstrap-datepicker.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/bootstrap-datetimepicker.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/bootstrap-editable.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/bootstrap-markdown.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/bootstrap-multiselect.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/bootstrap-tag.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/bootstrap-timepicker.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/bootstrap-wysiwyg.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/buttons.colVis.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/buttons.flash.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/buttons.html5.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/buttons.print.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/chosen.jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/ckeditor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/dataTables.buttons.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/dataTables.select.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/daterangepicker.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/dropzone.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/excanvas.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/fullcalendar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/grid.locale-en.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/holder.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/html5shiv.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery-1.11.3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery-2.1.4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery-additional-methods.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery-typeahead.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery-ui.custom.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery-ui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery.bootstrap-duallistbox.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery.colorbox.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery.dataTables.bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery.dataTables.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery.easypiechart.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery.flot.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery.flot.pie.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery.flot.resize.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery.gritter.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery.hotkeys.index.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery.inputlimiter.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery.jqGrid.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery.knob.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery.maskedinput.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery.mobile.custom.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery.nestable.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery.raty.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery.sparkline.index.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery.ui.touch-punch.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery.validate.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/markdown.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/moment.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/prettify.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/respond.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/select2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/spin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/spinbox.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/summernote.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/summernote.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/sweetalert2.all.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/tree.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/wizard.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/swf/flashExport.swf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/app_tmp.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/defaults/click-me.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/defaults/user.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/components/ck_editor.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/components/page_header.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/components/summer_note.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/layouts/master.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/login/login.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/partials/_alert_message.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/partials/_breadcrumbs.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/partials/_footer.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/partials/_header.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/partials/_page_header.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/partials/_paginate.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/partials/_settings.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/partials/_sidebar.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/partials/sidebar_modules/admin.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/partials/sidebar_modules/dashboard.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/merchent/components/ck_editor.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/merchent/components/page_header.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/merchent/components/summer_note.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/merchent/layouts/master.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/merchent/login/login.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/merchent/partials/_alert_message.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/merchent/partials/_breadcrumbs.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/merchent/partials/_footer.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/merchent/partials/_header.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/merchent/partials/_page_header.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/merchent/partials/_paginate.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/merchent/partials/_settings.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/merchent/partials/_sidebar.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/merchent/partials/sidebar_modules/admin.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/merchent/partials/sidebar_modules/dashboard.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/merchent/parcel/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/merchent/partials/sidebar_modules/merchent.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/merchent/dashboard.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/merchent/parcel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.styleci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.styleci.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/AdminLoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/AdminLoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/MerchentLoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/MerchentLoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Merchent/MerchentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Merchent/MerchentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Merchent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Merchent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_01_083031_create_merchents_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_01_083031_create_merchents_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/admin-login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/admin-login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/MerchentRegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/MerchentRegistrationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/merchent-login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/merchent-login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/merchent/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/merchent/partials/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/merchent/partials/_sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/merchent/partials/sidebar_modules/admin.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/server.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -336,7 +143,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="G:/codename-bazar" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -371,7 +178,10 @@
       <workItem from="1606884977646" duration="1579000" />
       <workItem from="1606887311676" duration="15559000" />
       <workItem from="1606972488556" duration="675000" />
-      <workItem from="1606977384585" duration="14930000" />
+      <workItem from="1606977384585" duration="15611000" />
+      <workItem from="1607150381842" duration="18000" />
+      <workItem from="1607150407553" duration="11168000" />
+      <workItem from="1607230918150" duration="25282000" />
     </task>
     <servers />
   </component>
@@ -391,18 +201,22 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607151910466">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1607151910466" />
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606981846943">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1606981846943" />
-    <state x="463" y="106" key="FileChooserDialogImpl" timestamp="1606973884992">
+    <state x="463" y="106" key="FileChooserDialogImpl" timestamp="1607253676514">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606973884992" />
-    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1606803650107">
+    <state x="463" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1607253676514" />
+    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1607155051183">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1606803650107" />
+    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1607155051183" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -421,6 +235,26 @@
           <url>file://$PROJECT_DIR$/resources/views/auth/merchent-login.blade.php</url>
           <line>63</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/merchent/parcel/index.blade.php</url>
+          <line>43</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/merchent/parcel/index.blade.php</url>
+          <line>44</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/merchent/parcel/index.blade.php</url>
+          <line>51</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/merchent/parcel/index.blade.php</url>
+          <line>61</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

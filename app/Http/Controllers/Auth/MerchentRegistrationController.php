@@ -18,7 +18,7 @@ class MerchentRegistrationController extends Controller
         $this->validate($request, [
             'name' => 'required|string|max:255',
             'mobile' => 'required|string',
-            'otp_code' => 'string',
+//            'otp_code' => 'string',
 //            'password' => 'required|string|min:5|confirmed',
         ]);
 
