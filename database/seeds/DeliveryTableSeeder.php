@@ -13,23 +13,23 @@ class DeliveryTableSeeder extends Seeder
     {
         \App\Admin\Delivery::insert([
             [
-                'id' => 1,
+                'id' => 2,
                 'name' => 'Express Delivery (Only dhaka)',
             ],
             [
-                'id' => 2,
+                'id' => 3,
                 'name' => 'Inside Dhaka (Some Day)',
             ],
             [
-                'id' => 3,
+                'id' => 4,
                 'name' => 'Inside Dhaka (Next day)',
             ],
             [
-                'id' => 4,
+                'id' => 5,
                 'name' => 'Dhaka suburbs (Next day)',
             ],
             [
-                'id' => 5,
+                'id' => 6,
                 'name' => 'Outside Dhaka',
             ],
 

@@ -15,19 +15,24 @@ class MerchentRegistrationController extends Controller
 
     public function register(Request $request)
     {
-        $this->validate($request, [
-            'name' => 'required|string|max:255',
-            'mobile' => 'required|string',
-//            'otp_code' => 'string',
-//            'password' => 'required|string|min:5|confirmed',
-        ]);
+        try {
+            $this->validate($request, [
+                'name' => 'required|string|max:255',
+                'mobile' => 'required|string',
+                'email' => 'required'
+            ]);
 
-        Merchent::create([
-            'name' => $request['name'],
-            'mobile' => $request['mobile'],
-            'otp_code' => $request['otp_code'],
-            'password' => Hash::make($request['password']),
-        ]);
+            Merchent::create([
+                'name' => $request['name'],
+                'mobile' => $request['mobile'],
+                'otp_code' => $request['otp_code'],
+                'email' => $request['email'],
+                'password' => Hash::make($request['password']),
+            ]);
+
+        }catch (\Exception $exception){
+            return redirect()->back();
+        }
 
         return  redirect()->route('merchent.dashboard');
 

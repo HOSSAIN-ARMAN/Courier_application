@@ -17,7 +17,7 @@ class MerchentLoginController extends Controller
     public function login(Request $request){
         $this->validate($request, [
            'mobile' => 'required',
-           'password' => 'required|min:4'
+           'password' => 'required|min:4',
         ]);
 
         if(Auth::guard('merchent')->attempt(['mobile'=>$request->mobile, 'password' => $request->password], $request->remember)){

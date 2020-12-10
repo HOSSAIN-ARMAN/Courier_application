@@ -18,7 +18,16 @@ class CreateMerchentsTable extends Migration
             $table->string('name');
             $table->string('mobile')->unique();
             $table->string('otp_code')->nullable();
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('address')->nullable();
+            $table->string('pick_up_address')->nullable();
+            $table->unsignedBigInteger('pick_up_type_id')->nullable();
+            $table->string('shop_name')->nullable();
+            $table->string('pick_up_number')->nullable();
+            $table->string('image')->nullable();
+            $table->rememberToken();
             $table->timestamps();
         });
     }

@@ -141,9 +141,17 @@
                     <input type="text" id="pick_up_address" name="pick_up_address" class="form-control">
                 </div>
             </div>
+            <div class="form-group" style="display: none">
+                <label class="col-sm-3 control-label no-padding-right" for="pick_up_address">Status <sup class="red">*</sup></label>
+                <div class="col-sm-7">
+                    <input type="radio" name="status" checked="checked" value="0">
+                    <input type="radio" name="status" value="1">
+                </div>
+            </div>
         </div>
 
      </div>
+        <!-- ------------------------------------------- -->
         <!-- for customer -->
           <div class="col-sm-5">
              <div class="row padding">
@@ -199,7 +207,7 @@
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-4">
                 <button class="btn btn-sm btn-success submit create-button" type="submit">
-                    <i class="fa fa-save"></i> Add
+                    <i class="fa fa-save"></i> Create Pick-up Request
                 </button>
 
 {{--                                <a href="{{route('admin.category.index')}}" class="btn btn-sm btn-gray">--}}

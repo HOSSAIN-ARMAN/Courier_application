@@ -219,6 +219,13 @@
 
                                             <label class="block clearfix">
 														<span class="block input-icon input-icon-right">
+															<input type="email" name="email" class="form-control" required placeholder="Email" />
+															<i class="ace-icon fa fa-mail-reply-all"></i>
+														</span>
+                                            </label>
+
+                                            <label class="block clearfix">
+														<span class="block input-icon input-icon-right">
 															<input type="text" name="mobile" class="form-control" required placeholder="Mobile Number" />
                                                             <button type="button" class="btn btn-info" style="visibility: hidden">Send OTP</button>
 															<i class="ace-icon fa fa-mobile-phone"></i>

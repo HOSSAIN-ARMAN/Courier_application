@@ -18,7 +18,7 @@ class Merchent extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'mobile', 'otp_code','password'
+        'name', 'mobile', 'otp_code','password', 'email', 'address', 'pick_up_address', 'pick_up_type_id', 'shop_name', 'pick_up_number',
     ];
 
     /**

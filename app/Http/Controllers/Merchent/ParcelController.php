@@ -10,14 +10,22 @@ use App\Admin\PickUpZone;
 use App\Merchent;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\View\View;
+use DB;
+Use Illuminate\Support\Collection;
 use PhpParser\Node\Stmt\Return_;
 
 class ParcelController extends Controller
 {
+
+
     public function __construct()
     {
         $this->middleware('auth:merchent');
+
+//        $parceles = Merchent\Parcel::paginate(15);
+//        View::share([
+//            'parceles' => $parceles,
+//        ]);
 
     }
 
@@ -36,11 +44,7 @@ class ParcelController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         //
@@ -49,9 +53,33 @@ class ParcelController extends Controller
 
     public function store(Request $request)
     {
+//        return $request->all();
+        $invoiceNo =  'Invoice-No: '.time();
         $merchentId = auth('merchent')->id();
+        $parcelId = Merchent\Parcel::create($this->data($request, $merchentId, $invoiceNo))->id;
+        $this->storeCustomer($request, $merchentId, $parcelId);
+
+        return redirect()
+            ->route('parcel.index')
+            ->with('message', 'Pick-up Request successfully!');
+
+    }
+    private function storeCustomer($request, $merchentId, $parcelId){
+        $customerInfo = array(
+            'merchent_id' => $merchentId,
+            'customer_name' => $request->customer_name,
+            'customer_contact' => $request->customer_contact,
+            'delivery_zone_id' => $request->delivery_zone_id,
+            'customer_address' => $request->customer_address,
+            'customer_comments' => $request->customer_comments,
+            'parcel_id' => $parcelId
+        );
+        Merchent\Customer::insert($customerInfo);
+    }
+
+    private function dataWithoutDeliveryTypeId($request, $merchentId, $invoiceNo){
         $parcelInfo = array(
-          'merchent_id'  => $merchentId,
+            'merchent_id'  => $merchentId,
             'parcel_type_id' => $request->parcel_type_id,
             'delivery_type_id' => $request->delivery_type_id,
             'pick_up_zone_id' => $request->pick_up_zone_id,
@@ -62,28 +90,59 @@ class ParcelController extends Controller
             'cod_charge' => $request->cod_charge,
             'pickup_number' => $request->pickup_number,
             'pick_up_address' => $request->pick_up_address,
+            'status' => $request->status,
+            'invoice_no' => $invoiceNo
         );
-
-        $this->storeCustomer($request, $merchentId);
-        Merchent\Parcel::insert($parcelInfo);
-
-        return redirect()
-            ->route('parcel.index')
-            ->with('message', 'Parcel created successfully!');
-
+        return $parcelInfo;
     }
-    public function storeCustomer($request, $merchentId){
-        $customerInfo = array(
-            'merchent_id' => $merchentId,
-            'customer_name' => $request->customer_name,
-            'customer_contact' => $request->customer_contact,
-            'delivery_zone_id' => $request->delivery_zone_id,
-            'customer_address' => $request->customer_address,
-            'customer_comments' => $request->customer_comments,
+    private function data($request, $merchentId, $invoiceNo){
+        $parcelInfo = array(
+            'merchent_id'  => $merchentId,
+            'parcel_type_id' => $request->parcel_type_id,
+            'delivery_type_id' => $request->delivery_type_id,
+            'pick_up_zone_id' => $request->pick_up_zone_id,
+            'weight' => $request->weight,
+            'price' => $request->price,
+            'delivery_fee' => $request->delivery_fee,
+            'amount' => $request->amount,
+            'cod_charge' => $request->cod_charge,
+            'pickup_number' => $request->pickup_number,
+            'pick_up_address' => $request->pick_up_address,
+            'status' => $request->status,
+            'invoice_no' => $invoiceNo
         );
-        Merchent\Customer::insert($customerInfo);
+        return $parcelInfo;
     }
 
+    public function details(){
+
+
+        $parceles = DB::table('parcels')
+            ->join('merchents', 'parcels.merchent_id', '=', 'merchents.id')
+            ->join('customers', 'parcels.id', '=', 'customers.parcel_id')
+            ->join('parcel_types', 'parcels.parcel_type_id', '=', 'parcel_types.id')
+            ->join('deliveries', 'parcels.delivery_type_id', '=', 'deliveries.id')
+            ->join('delivery_zones', 'customers.delivery_zone_id', '=', 'delivery_zones.id')
+            ->join('pick_up_zones', 'parcels.pick_up_zone_id', '=', 'pick_up_zones.id')
+            ->select(
+                'parcels.*',
+                'merchents.name as  merchent_name',
+                'customers.customer_name' , 'customers.customer_contact', 'customers.customer_address',
+                'parcel_types.name as parcelTypeName',
+                'deliveries.name as deliveryName',
+                'delivery_zones.name as deliveryZoneName',
+                'pick_up_zones.name as pickUpZoneName'
+            )->get();
+
+//       dd($parceles);
+
+        return view('merchent.parcel.detail',[
+            'parceles' => $parceles,
+        ]);
+    }
+    public function display(){
+        return "nice";
+    }
     public function show($id)
     {
         //

@@ -31,7 +31,16 @@
                 <li class="light-blue dropdown-modal">
                     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
 {{--                        <img class="nav-user-photo" src="{{asset(auth()->user()->image)}}" alt="{{auth()->user()->name}}">--}}
+                        @if(auth('merchent')->id())
+
+                            @if(isset($merchent->image))
+                                <img class="nav-user-photo" src="{{ asset($merchent->image) }}">
+                            @else
+                                <img class="nav-user-photo" src="{{ Auth::user()->image }}">
+                            @endif
+                        @else
                         <img class="nav-user-photo" src="{{ asset('assets/images/defult-img/admin-default-img.png') }}">
+                        @endif
                         <span class="user-info">
                                     <small>Welcome,</small>
                                 {{ Auth::user()->name }}
@@ -48,7 +57,7 @@
                         </li>
 
                         <li>
-                            <a href="#">
+                            <a href="{{ route('profile.index') }}">
                                 <i class="ace-icon fa fa-user"></i>
                                 Profile
                             </a>

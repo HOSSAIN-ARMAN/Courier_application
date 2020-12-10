@@ -88,6 +88,21 @@
     if ('ontouchstart' in document.documentElement) document.write("<script src='{{ asset('assets/js/jquery.mobile.custom.min.js') }}'>" + "<" + "/script>");
 </script>
 
+
+{{--jquery for table--}}
+
+<!-- page specific plugin scripts -->
+<script src="{{ asset('assets/js/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.dataTables.bootstrap.min.js') }}"></script>
+<script src="{{ asset('assets/js/dataTables.buttons.min.js') }}"></script>
+<script src="{{ asset('assets/js/buttons.flash.min.js') }}"></script>
+<script src="{{ asset('assets/js/buttons.html5.min.js') }}"></script>
+<script src="{{ asset('assets/js/buttons.print.min.js') }}"></script>
+<script src="{{ asset('assets/js/buttons.colVis.min.js') }}"></script>
+<script src="{{ asset('assets/js/dataTables.select.min.js') }}"></script>
+
+
+
 {{-- ACE --}}
 <script src="{{ asset('assets/js/ace-elements.min.js') }}"></script>
 <script src="{{ asset('assets/js/ace.min.js') }}"></script>

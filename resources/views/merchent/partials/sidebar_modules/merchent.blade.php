@@ -16,6 +16,13 @@
             </a>
             <b class="arrow"></b>
         </li>
+        <li class="{{ $routeName === 'parcel.details' ? 'open' : ''}}">
+            <a href="{{ route('parcel.details') }}">
+                <i class="menu-icon fa fa-caret-right"></i>
+                Parcel Details
+            </a>
+            <b class="arrow"></b>
+        </li>
     </ul>
 </li>
 

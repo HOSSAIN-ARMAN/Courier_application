@@ -26,6 +26,8 @@ class CreateParcelsTable extends Migration
             $table->string('cod_charge');
             $table->string('pickup_number');
             $table->string('pick_up_address');
+            $table->tinyInteger('status');
+            $table->string('invoice_no');
             $table->timestamps();
         });
         Schema::table('parcels', function (Blueprint $table) {
