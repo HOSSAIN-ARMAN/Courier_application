@@ -49,7 +49,7 @@
             <div class="form-group">
                 <label class="col-sm-3 control-label no-padding-right" for="parcel">Parcel Create From <sup class="red">*</sup></label>
                 <div class="col-sm-7">
-                    <select class="form-control" name="parcel_type_id" id="parcel_area">
+                    <select class="form-control" name="parcel_type_id" id="parcel_type_id">
                         <option value="-1">--select--</option>
                         @foreach($parcelArea as $area)
                         <option value="{{$area->id}}">{{$area->name}}</option>
@@ -62,11 +62,11 @@
             <div class="form-group" id="delivery_type_div">
                 <label class="col-sm-3 control-label no-padding-right" for="delivery">Delivery Type <sup class="red">*</sup></label>
                 <div class="col-sm-7">
-                    <select class="form-control" name="delivery_type_id" >
-                        <option value="1">--select--</option>
-                        @foreach($deliveries as $delivery)
-                        <option value="{{$delivery->id}}">{{ $delivery->name }}</option>
-                        @endforeach
+                    <select class="form-control" name="delivery_type_id" id="delivery_type_id" >
+{{--                        <option value="1">--select--</option>--}}
+{{--                        @foreach($deliveries as $delivery)--}}
+{{--                        <option value="{{$delivery->id }}">{{ $delivery->name }}</option>--}}
+{{--                        @endforeach--}}
                     </select>
                     <strong class="red">{{ $errors->first('code') }}</strong>
                 </div>
@@ -221,6 +221,35 @@
 @endsection
 
 @push('js')
+
+    <script type="text/javascript">
+        $("#parcel_type_id").change( function (){
+            var id = $('#parcel_type_id').val();
+            var jsonData = {id:id};
+            $.ajax({
+                url       :'{{ URL:: route('get.delivery.type.name') }}/'+id,
+                method    :'GET',
+                data      : jsonData,
+                dataType  :'JSON',
+                success   :function(data){
+                    if (data){
+                        if (data[0].id == 1){
+                            $('#delivery_type_div').hide();
+                        }else {
+                            $("#delivery_type_div").show();
+                            $("#delivery_type_id").empty();
+                            $("#delivery_type_id").append('<Option value="' + -1 + '">' + "--select--" + '</Option>');
+                            $.each(data, function (key, value) {
+                                $("#delivery_type_id").append('<option value="' + (value.id) + '">' + value.name + '</option>');
+                            });
+                        }
+                    }
+                }
+            });
+        });
+
+    </script>
+
     <script type="text/javascript">
         function delete_check(id) {
             Swal.fire({
@@ -241,16 +270,7 @@
     </script>
 
 
-    <script type="text/javascript">
-        $('#parcel_area').change(function (){
-            if ($(this).val() == "2") {
-                $('#delivery_type_div').hide();
-            }else {
-                $('#delivery_type_div').show();
-            }
 
-        });
-    </script>
 
 
 
