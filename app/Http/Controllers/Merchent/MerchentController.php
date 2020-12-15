@@ -19,6 +19,7 @@ class MerchentController extends Controller
      */
     public function index()
     {
-        return view('merchent.layouts.master');
+//        return view('merchent.layouts.master');
+        return view('merchent.dashboard.index');
     }
 }

@@ -20,31 +20,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ba70c78-7334-413e-8643-99f3505b2f9d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Traits/ProfileFileUpLoad.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/merchent/parcel/detail.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/merchent/profile/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/merchent/profile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Admin/BankInfo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Admin/MobileBank.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Merchent/PaymentController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Merchent/ProfileBankInfoControlller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Merchent/MerchentBankInfo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Merchent/MerchentMobileBankInfo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_10_093239_create_mobile_banks_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_10_093317_create_bank_infos_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_12_025613_create_merchent_mobile_bank_infos_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_12_025646_create_merchent_bank_infos_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/BankTableSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/MobileBankTableSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Profile-img/sk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Profile-img/test.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/merchent/dashboard/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/merchent/payment/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/merchent/payment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/MerchentLoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/MerchentLoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/MerchentRegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/MerchentRegistrationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Merchent/ParcelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Merchent/ParcelController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Merchent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Merchent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Merchent/Customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Merchent/Customer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Merchent/Parcel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Merchent/Parcel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.zip" beforeDir="false" afterPath="$PROJECT_DIR$/app.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Merchent/MerchentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Merchent/MerchentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Merchent/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Merchent/ProfileController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_01_083031_create_merchents_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_01_083031_create_merchents_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_06_111851_create_parcels_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_06_111851_create_parcels_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_06_113629_create_customers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_06_113629_create_customers_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DeliveryTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DeliveryTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/merchent-login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/merchent-login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/merchent/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/merchent/layouts/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/merchent/parcel/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/merchent/parcel/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/merchent/partials/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/merchent/partials/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/merchent/partials/sidebar_modules/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/merchent/partials/sidebar_modules/dashboard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/merchent/partials/sidebar_modules/merchent.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/merchent/partials/sidebar_modules/merchent.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/merchent/parcel.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/merchent/parcel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/merchent/profile/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/merchent/profile/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/merchent/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/merchent/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/merchent/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/merchent/profile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests.zip" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,6 +207,18 @@
       <workItem from="1607495982554" duration="62000" />
       <workItem from="1607499042070" duration="37971000" />
       <workItem from="1607582299914" duration="168000" />
+      <workItem from="1607585186594" duration="9440000" />
+      <workItem from="1607739232434" duration="9156000" />
+      <workItem from="1607757271853" duration="12270000" />
+      <workItem from="1607777269759" duration="5153000" />
+      <workItem from="1607784827727" duration="14899000" />
+      <workItem from="1607833927151" duration="8881000" />
+      <workItem from="1607860765825" duration="1369000" />
+      <workItem from="1607874072844" duration="9860000" />
+      <workItem from="1607917096659" duration="19824000" />
+      <workItem from="1608005163784" duration="6507000" />
+      <workItem from="1608013045352" duration="190000" />
+      <workItem from="1608014303908" duration="2176000" />
     </task>
     <servers />
   </component>
@@ -226,18 +242,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1607151910466" />
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606981846943">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607755211857">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1606981846943" />
-    <state x="463" y="106" key="FileChooserDialogImpl" timestamp="1607582469425">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1607755211857" />
+    <state x="463" y="106" key="FileChooserDialogImpl" timestamp="1608013234076">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1607582469425" />
-    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1607530096921">
+    <state x="463" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1608013234076" />
+    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1607928225377">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1607530096921" />
+    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1607928225377" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1607754114613">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1607754114613" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -276,6 +296,56 @@
           <url>file://$PROJECT_DIR$/resources/views/merchent/parcel/index.blade.php</url>
           <line>61</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/Merchent/ProfileController.php</url>
+          <line>30</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/merchent/profile/index.blade.php</url>
+          <line>181</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/merchent/profile/index.blade.php</url>
+          <line>221</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/merchent/profile/index.blade.php</url>
+          <line>223</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/merchent/profile/index.blade.php</url>
+          <line>235</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/merchent/profile/index.blade.php</url>
+          <line>238</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/merchent/profile/index.blade.php</url>
+          <line>192</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/merchent/profile/index.blade.php</url>
+          <line>194</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/merchent/profile/index.blade.php</url>
+          <line>320</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/merchent/dashboard/index.blade.php</url>
+          <line>146</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

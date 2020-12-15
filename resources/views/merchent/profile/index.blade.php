@@ -6,75 +6,10 @@
 
 @push('css')
     <style>
-        #profile-upload{
-            background-image:url('');
-            background-size:cover;
-            background-position: center;
-            height: 250px; width: 250px;
-            border: 1px solid #bbb;
-            position:relative;
-            border-radius:250px;
-            overflow:hidden;
-        }
-        #profile-upload:hover input.upload{
-            display:block;
-        }
-        #profile-upload:hover .hvr-profile-img{
-            display:inline-block;
-        }
-        #profile-upload .fa{   margin: auto;
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            text-align: center;
-            right: 0;
-            padding: 6px;
-            opacity:1;
-            transition:opacity 1s linear;
-            -webkit-transform: scale(.75);
-
-
-        }
-        #profile-upload:hover .fa{
-            opacity:1;
-            -webkit-transform: scale(1);
-        }
-        #profile-upload input.upload {
-            z-index:1;
-            left: 0;
-            margin: 0;
-            bottom: 0;
-            top: 0;
-            padding: 0;
-            opacity: 0;
-            outline: none;
-            cursor: pointer;
-            position: absolute;
-            background:#ccc;
-            width:100%;
-            display:none;
-        }
-
-        #profile-upload .hvr-profile-img {
-            width:100%;
-            height:100%;
-            display: none;
-            position:absolute;
-            vertical-align: middle;
-            position: relative;
-            background: transparent;
-        }
-        #profile-upload .fa:after {
-            content: "";
-            position:absolute;
-            bottom:0; left:0;
-            width:100%; height:0px;
-            background:rgba(0,0,0,0.3);
-            z-index:-1;
-            transition: height 0.3s;
-        }
-
-        #profile-upload:hover .fa:after { height:100%; }
+        /*td.nowrap {*/
+        /*    white-space: nowrap;*/
+        /*    width: 100%;*/
+        /*}*/
 
     </style>
 @endpush
@@ -142,7 +77,7 @@
                         </li>
 
                         <li>
-                            <a data-toggle="tab" href="#feed">
+                            <a data-toggle="tab" href="#feed" onclick="showMErchentMobileBankTableRow()">
                                 <i class="orange ace-icon fa fa-bank bigger-120"></i>
                                 Mobile banking
                             </a>
@@ -166,7 +101,7 @@
                     <div class="tab-content no-border padding-24">
                         <div id="home" class="tab-pane in active">
                             <div class="row">
-                                <form class="form-horizontal" enctype="multipart/form-data" action="{{ route('merchent.Info.update') }}" method="post">
+                                <form name="mobileBankForm" class="form-horizontal" enctype="multipart/form-data" action="{{ route('merchent.Info.update') }}" method="post">
                                     @csrf
                                     <input type="hidden" id="merchent_id" name="id" value="{{$merchent->id}}">
                                     <div class="col-sm-6">
@@ -244,29 +179,197 @@
 
                         <div id="feed" class="tab-pane">
                             <div class="profile-feed row">
-                                <div class="col-sm-6">
+                                <table id="mobile_bank_info_table" class="table  table-bordered responsive" cellspacing="0" style="width:100%">
+                                    <button  onclick="addMobileBankInfo(event.target)" class="btn btn-success  float-left" > Add Mobile Bank-Info</button>
+                                    <thead class="">
+                                    <tr>
+                                        <th>Account Type</th>
+                                        <th >Accoutn Number</th>
+                                        <th class="detail-col" style="width: 100px">Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="mobile-bank-table">
+                                    @foreach($merchentMobileBankDetails as $detail)
+                                      <tr id="_mobile_bank_row_{{$detail->id}}" class="tr">
+                                          <td class="center">{{ $detail->mobile_bank_name }}</td>
+                                          <td class="center">{{ $detail->account_no }}</td>
+                                          <td class="center">
+                                              <a href="javascript:void(0)" data-id="{{ $detail->id }}" onclick="editMobileBankInfo(event.target)" class="btn btn-info">Edit</a>
+                                              <a href="javascript:void(0)" data-id="{{ $detail->id }}" onclick="deleteMobileBankInfo(event.target)" class="btn btn-danger">Delete</a>
+                                          </td>
+                                      </tr>
 
+                                    @endforeach
+                                    </tbody>
+                                </table>
+{{--                            {{ $merchentMobileBankDetails->links() }}--}}
+
+                                <!-- mobile bank modal -->
+                                <div class="modal fade" id="mobile-bank-modal" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title"></h4>
+                                            </div>
+                                            <form name="mobileBankForm" class="form-horizontal">
+                                                @csrf
+                                            <div class="modal-body">
+                                                    <div class="form-group">
+                                                        <div class="col-sm-12">
+                                                            <div class="form-group">
+                                                                <label class="col-sm-3 control-label no-padding-right" for="parcel">Account Type <sup class="red">*</sup></label>
+                                                                <div class="col-sm-7">
+                                                                    <select class="form-control" name="mobile_bank_name" id="mobile_bank_name">
+                                                                        <option value="-1">--select--</option>
+                                                                        @foreach($mobileBankNames as $mobileBank)
+                                                                            <option value="{{$mobileBank->name}}">{{$mobileBank->name}}</option>
+                                                                        @endforeach
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <span id="titleError" class="alert-message"></span>
+                                                            <input type="hidden" name="id" id="merchent_mobile_bank_info_id" >
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="col-sm-12">
+                                                            <div class="form-group">
+                                                                <label class="col-sm-3 control-label no-padding-right" for="parcel">Account Number <sup class="red">*</sup></label>
+                                                                <div class="col-sm-7">
+                                                                    <input type="number" id="account_no" name="account_no" class="form-control" placeholder="Enter Mobile bank Account Number">
+                                                                </div>
+                                                            </div>
+                                                            <span id="titleError" class="alert-message"></span>
+                                                            {{--                                                            <input type="hidden" name="id" id="post_id" >--}}
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            </form>
+                                            <div class="modal-footer">
+                                                <button id="btn_text" class="btn btn-primary" onclick="createMerchantMobileBankInfo()">Save</button>
+                                                <button type="button" id="btn_text" class="btn btn-danger" onclick="cancelMerchantMobileBankInfoModal()">Cancel</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
                                 </div>
-
                             </div>
                         </div><!-- mobile Banking -->
 
                         <div id="friends" class="tab-pane">
                             <div class="profile-users clearfix">
+                                <table id="bank-table" class="table  table-bordered table-hover responsive">
+                                    <button  onclick="addBankInfo(event.target)" class="btn btn-outline-info"> Add Bank-Info</button>
+                                    <thead>
+                                    <tr>
+                                        <th>Bank Name</th>
+                                        <th>Accoutn Number</th>
+                                        <th>Routing Number</th>
+                                        <th>Card Number</th>
+                                        <th>Branch</th>
+                                        <th class="detail-col" style="width: 100px">Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="bank-table">
+                                    @foreach($bankDetails as $bankDetail)
+                                    <tr id="_bank_detail_id{{$bankDetail->id}}" class="tr">
+                                        <td class="center">{{$bankDetail->bank_name}}</td>
+                                        <td class="center">{{ $bankDetail->account_no }}</td>
+                                        <td class="center">{{ $bankDetail->routing_no }}</td>
+                                        <td class="center">{{ $bankDetail->card_no }}</td>
+                                        <td class="center">{{ $bankDetail->branch_name }}</td>
+                                        <td class="center">
+                                            <a href="javascript:void(0)" data-id="{{$bankDetail->id}}" onclick="editBankInfo(event.target)" class="btn btn-info">Edit</a>
+                                            <a href="javascript:void(0)" data-id="{{$bankDetail->id}}" onclick="deleteBankInfo(event.target)" class="btn btn-danger">Delete</a>
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                    </tbody>
+                                </table>
+                                <!--bank modal-->
+                                <div class="modal fade" id="bank-modal" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title"></h4>
+                                            </div>
+                                            <form name="bankForm" class="form-horizontal">
+                                                <div class="modal-body">
+                                                    <div class="form-group">
+                                                        <div class="col-sm-12">
+                                                            <div class="form-group">
+                                                                <label class="col-sm-3 control-label no-padding-right" for="parcel">Bank Name <sup class="red">*</sup></label>
+                                                                <div class="col-sm-7">
+                                                                    <select class="form-control" name="bank_name" id="bank_name">
+                                                                        <option value="-1">--select--</option>
+                                                                        @foreach($bankNames as $bankName)
+                                                                            <option value="{{ $bankName->name }}">{{$bankName->name}}</option>
+                                                                        @endforeach
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <span id="titleError" class="alert-message"></span>
+                                                            <input type="hidden" id="merchent_bank_infos_id" name="merchent_bank_infos_id" class="form-control" placeholder="Enter bank Account Number">
 
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="col-sm-12">
+                                                            <div class="form-group">
+                                                                <label class="col-sm-3 control-label no-padding-right" for="parcel">Account Number <sup class="red">*</sup></label>
+                                                                <div class="col-sm-7">
+                                                                    <input type="number" id="account_no" name="account_no" class="form-control account_no" placeholder="Enter bank Account Number">
+                                                                </div>
+                                                            </div>
+                                                            <span id="titleError" class="alert-message"></span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <div class="col-sm-12">
+                                                            <div class="form-group">
+                                                                <label class="col-sm-3 control-label no-padding-right" for="parcel">Routing Number <sup class="red">*</sup></label>
+                                                                <div class="col-sm-7">
+                                                                    <input type="number" id="routing_no" name="routing_no" class="form-control" placeholder="Routing Number">
+                                                                </div>
+                                                            </div>
+                                                            <span id="titleError" class="alert-message"></span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <div class="col-sm-12">
+                                                            <div class="form-group">
+                                                                <label class="col-sm-3 control-label no-padding-right" for="parcel">Card Number <sup class="red">*</sup></label>
+                                                                <div class="col-sm-7">
+                                                                    <input type="number" id="card_no" name="card_no" class="form-control" placeholder="Enter Card Number">
+                                                                </div>
+                                                            </div>
+                                                            <span id="titleError" class="alert-message"></span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <div class="col-sm-12">
+                                                            <div class="form-group">
+                                                                <label class="col-sm-3 control-label no-padding-right" for="parcel">Branch name <sup class="red">*</sup></label>
+                                                                <div class="col-sm-7">
+                                                                    <input type="text" id="branch_name" name="branch_name" class="form-control" placeholder="Enter Mobile bank Account Number">
+                                                                </div>
+                                                            </div>
+                                                            <span id="titleError" class="alert-message"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" id="bank_btn_text" class="btn btn-primary" onclick="createMerchantBankInfo()">Save</button>
+                                                    <button type="button" id="btn_text" class="btn btn-danger" onclick="cancelMerchantBankModal()">Cancel</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-
-                            <div class="hr hr10 hr-double"></div>
-
-                            <ul class="pager pull-right">
-                                <li class="previous disabled">
-                                    <a href="#">&larr; Prev</a>
-                                </li>
-
-                                <li class="next">
-                                    <a href="#">Next &rarr;</a>
-                                </li>
-                            </ul>
                         </div><!-- Bank-info -->
 
                         <div id="pictures" class="tab-pane"> <!-- change password-->
@@ -282,6 +385,240 @@
 @endsection
 
 @push('js')
+
+    <script type="text/javascript">
+        $("#bank-table").DataTable();
+
+        function addBankInfo(){
+            $('#bank-modal').modal('show');
+        }
+        function cancelMerchantBankModal(){
+            emptyBankData();
+            $('#bank-modal').modal('hide');
+        }
+
+        function emptyBankData(){
+            $("#merchent_bank_infos_id").val("");
+            $("#bank_name").val("");
+            $(".account_no").val("");
+            $("#routing_no").val("");
+            $("#card_no").val("");
+            $("#branch_name").val("");
+        }
+
+        function deleteBankInfo(event){
+            var id = $(event).data('id');
+            var url = '{{ route('bank.info.destroy') }}'
+            $.ajax({
+               url: url,
+               type:"POST",
+               data:{
+                   id:id,
+                   _token: '{{ csrf_token() }}'
+               },
+               success:function (data) {
+                  $("#_bank_detail_id"+id).remove();
+               }
+            });
+        }
+
+        function editBankInfo(event){
+            var id = $(event).data("id");
+            if (id){
+                $('#bank_btn_text').html('Update');
+            }
+            $.ajax({
+                url: '{{URL::route('bank.info.show') }}/'+id,
+                type:'GET',
+                success:function (response){
+                   if (response){
+                       $("#merchent_bank_infos_id").val(response.id);
+                       $("#bank_name").val(response.bank_name);
+                       $(".account_no").val(response.account_no);
+                       $("#routing_no").val(response.routing_no);
+                       $("#card_no").val(response.card_no);
+                       $("#branch_name").val(response.branch_name);
+                       $('#bank-modal').modal('show');
+                   }
+                }
+
+            })
+        }
+
+        function createMerchantBankInfo(){
+            $('#bank_btn_text').html('save');
+            var id = $("#merchent_bank_infos_id").val();
+            var bank_name  = $("#bank_name").val();
+            var account_no = $(".account_no").val();
+            var routing_no = $("#routing_no").val();
+            var card_no = $("#card_no").val();
+            var branch_name = $("#branch_name").val();
+            var url  = "{{ route('bank.info.store') }}"
+            $.ajax({
+               url: url,
+                type:"POST",
+                data:{
+                    id: id,
+                    bank_name: bank_name,
+                    account_no: account_no,
+                    routing_no: routing_no,
+                    card_no: card_no,
+                    branch_name: branch_name,
+                    _token: '{{ csrf_token() }}'
+                },
+                success:function (response){
+                    if (response){
+                        if (id){
+                            $("#_bank_detail_id"+id+" td:nth-child(1)").html(response.bank_name);
+                            $("#_bank_detail_id"+id+" td:nth-child(2)").html(response.account_no);
+                            $("#_bank_detail_id"+id+" td:nth-child(3)").html(response.routing_no);
+                            $("#_bank_detail_id"+id+" td:nth-child(4)").html(response.card_no);
+                            $("#_bank_detail_id"+id+" td:nth-child(5)").html(response.branch_name);
+                        }
+                        else {
+                            $('.bank-table').prepend('<tr id="_bank_detail_id'+response.id+'" class="tr"> ' +
+                                '<td class="center">' +response.bank_name+ '</td>' +
+                                '<td class="center">' +response.account_no+ '</td>'+
+                                '<td class="center">' +response.routing_no+ '</td>'+
+                                '<td class="center">' +response.card_no+ '</td>'+
+                                '<td class="center">' +response.branch_name+ '</td>'+
+                                '<td class="center"> <a href="javascript:void(0)" data-id = "'+ response.id +'" onclick = "editBankInfo(event.target)" class="btn btn-info">Edit</a>'+ " " +
+                                '<a href="javascript:void(0)" data-id = "' + response.id+'" onclick="deleteBankInfo(event.target)" class="btn btn-danger">Delete </a>' + '<td>' +
+                                '</tr>')
+
+                        }
+                        emptyBankData();
+                        $('#bank-modal').modal('hide');
+                    }
+                }
+
+            });
+        }
+
+
+    </script><!-- Bank Info Script -->
+
+    <script type="text/javascript">
+        $("#mobile_bank_info_table").DataTable();
+
+        {{--function showMErchentMobileBankTableRow(){--}}
+        {{--    $.ajax({--}}
+        {{--        url: '{{ URL::route('mobile.bank.info.display') }}',--}}
+        {{--        type:'get',--}}
+        {{--        success:function (response){--}}
+        {{--            if (response){--}}
+        {{--                $('.mobile-bank-table').empty();--}}
+        {{--                $.each(response, function (key, value) {--}}
+        {{--                    $('.mobile-bank-table').prepend('<tr id="_mobile_bank_row_'+value.id+'"> ' +--}}
+        {{--                        '<td>' +value.name+ '</td>' +--}}
+        {{--                        '<td>' +value.account_no+ '</td>'+--}}
+        {{--                        '<td> <a href="javascript:void(0)" data-id = "'+ value.id +'" onclick = "editMobileBankInfo(event.target)" class="btn btn-outline-info" > Edit </a>'+--}}
+        {{--                        '<a href="javascript:void(0)" data-id = "' + value.id+'" onclick="deleteMobileBankInfo(event.target)" class="btn btn-outline-danger">Delete </a>' + '<td>' +--}}
+        {{--                        '</tr>')--}}
+        {{--                });--}}
+        {{--            }--}}
+        {{--        }--}}
+        {{--    })--}}
+        {{--}--}}
+
+        function editMobileBankInfo(event){
+            var id = $(event).data("id");
+            if (id){
+                $('#btn_text').text('Update');
+            }
+            $.ajax({
+                url  : '{{ URL::route('mobile.bank.info.edit') }}/'+id,
+                type : 'GET',
+                success:function (response) {
+                    if(response) {
+                        $("#merchent_mobile_bank_info_id").val(response.id);
+                        $("#mobile_bank_name").val(response.mobile_bank_name);
+                        $("#account_no").val(response.account_no);
+                        $("#mobile-bank-modal").modal('show');
+                    }
+                }
+            });
+        }
+        function addMobileBankInfo(){
+            $("#mobile-bank-modal").modal('show');
+            $("#mobile_bank_name").val("");
+            $("#account_no").val("");
+            $('#btn_text').text('Save');
+        }
+
+        function cancelMerchantMobileBankInfoModal(){
+            $("#mobile-bank-modal").modal('hide');
+        }
+
+        function createMerchantMobileBankInfo(){
+            var id = $("#merchent_mobile_bank_info_id").val();
+            var mobile_bank_name = $("#mobile_bank_name").val();
+            var account_no = $("#account_no").val();
+            var url = "{{ route('mobile.bank.info.store') }}";
+
+            $.ajax({
+                url: url,
+                type:"POST",
+                data: {
+                    id: id,
+                    mobile_bank_name: mobile_bank_name,
+                    account_no: account_no,
+                    _token: '{{ csrf_token() }}',
+                },
+                success:function (response){
+                  if (response){
+                      if (id){
+                          $("#_mobile_bank_row_"+id+" td:nth-child(1)").html(response.mobile_bank_name);
+                          $("#_mobile_bank_row_"+id+" td:nth-child(2)").html(response.account_no);
+                      }
+                      else {
+                      $('.mobile-bank-table').prepend('<tr id="_mobile_bank_row_'+response.id+'" class="tr"> ' +
+                          '<td class="center">' +response.mobile_bank_name+ '</td>' +
+                          '<td class="center">' +response.account_no+ '</td>'+
+                          '<td class="center"> <a href="javascript:void(0)" data-id = "'+ response.id +'" onclick = "editMobileBankInfo(event.target)" class="btn btn-info">Edit</a>'+ " " +
+                          '<a href="javascript:void(0)" data-id = "' + response.id+'" onclick="deleteMobileBankInfo(event.target)" class="btn btn-danger">Delete </a>' + '<td>' +
+                          '</tr>')
+
+                  }
+
+                  }
+
+                    $("#mobile-bank-modal").modal('hide');
+
+                }
+
+            });
+        }
+
+        function deleteMobileBankInfo(event) {
+            var id = $(event).data("id");
+            // if (id){
+            //     Swal.fire('Are You sure to delete this');
+            //     return;
+            // }
+            $.ajax({
+                url    : '{{ route('mobile.bank.info.destroy') }}',
+                type   : 'POST',
+                data   : {
+                    id    : id,
+                    _token : '{{ csrf_token() }}',
+                },
+                success: function (response) {
+                    $("#_mobile_bank_row_"+id).remove();
+                    // if (response.code == 200 ) {
+                    //     Swal.fire('delete  successfully');
+                    // }
+                },
+                error    : function (response) {
+                    $('#titleError').text(response.responseJSON.errors.title);
+                    $('#descriptionError').text(response.responseJSON.errors.description);
+                }
+            });
+        }
+
+
+    </script> <!-- Mobile Bank Info Script -->
+
     <script type="text/javascript">
         function delete_check(id) {
             Swal.fire({
@@ -311,6 +648,7 @@
 
         });
     </script>
+
 
 
 

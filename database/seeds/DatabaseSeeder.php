@@ -11,6 +11,18 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+//        $old_user = DB::connection('old')->table('users')->get();
+//
+//        foreach ($old_users as $user) {
+//            DB::connection('new')->table('users')->insert([
+//                'name'     => $user->name,
+//                'email'    => $user->email,
+//                'password' => $user->password,
+//                'old_id'   -> $user->id
+//         // ...
+//        ]);
+//       }
+
         // $this->call(UsersTableSeeder::class);
         $this->call(AdminTableSeeder::class);
         $this->call(DeliveryTableSeeder::class);
@@ -18,5 +30,8 @@ class DatabaseSeeder extends Seeder
         $this->call(PickUpZoneTableSeeder::class);
         $this->call(ParcelTyepTableSeeder::class);
         $this->call(PickUpTypeTabeleSeeder::class);
+        $this->call(MobileBankTableSeeder::class);
+        $this->call(BankTableSeeder::class);
+
     }
 }

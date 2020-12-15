@@ -1,4 +1,6 @@
 {{--        <li class="{{ strpos($routeName, 'backend.admin') === 0 ? 'active open' : ''}}">--}}
+
+
 <li class="">
     <a href="#" class="dropdown-toggle">
         <i class="menu-icon fa fa-asterisk"></i>
@@ -20,6 +22,28 @@
             <a href="{{ route('parcel.details') }}">
                 <i class="menu-icon fa fa-caret-right"></i>
                 Parcel Details
+            </a>
+            <b class="arrow"></b>
+        </li>
+    </ul>
+</li>
+
+<!-- For Payment SideBar -->
+
+<li class="">
+    <a href="#" class="dropdown-toggle">
+        <i class="menu-icon fa fa-bank"></i>
+        <span class="menu-text">
+                   Payments-Info
+                </span>
+        <b class="arrow fa fa-angle-down"></b>
+    </a>
+    <b class="arrow"></b>
+    <ul class="submenu">
+        <li class="{{ $routeName === 'merchant.payment.index' ? 'open' : ''}}">
+            <a href="{{ route('merchant.payment.index') }}">
+                <i class="menu-icon fa fa-caret-right"></i>
+                Payment
             </a>
             <b class="arrow"></b>
         </li>
