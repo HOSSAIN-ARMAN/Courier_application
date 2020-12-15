@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="839b2004-6782-44d5-a026-e7e52ba42aaa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/request-parcel/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/admin/dashboard.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/admin/parcel-request.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/courier_application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/courier_application.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Admin/Delivery.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Merchent/ParcelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Merchent/ParcelController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_06_094614_create_deliveries_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DeliveryTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DeliveryTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/ParcelTyepTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/ParcelCreateFromTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/partials/sidebar_modules/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/partials/sidebar_modules/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/merchent/parcel/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/merchent/parcel/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/merchent/partials/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/merchent/partials/_header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/merchent/parcel.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/merchent/parcel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +145,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608043880804</updated>
-      <workItem from="1608043883324" duration="15023000" />
+      <workItem from="1608043883324" duration="15830000" />
     </task>
     <servers />
   </component>
