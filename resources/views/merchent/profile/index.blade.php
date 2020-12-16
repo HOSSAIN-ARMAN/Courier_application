@@ -373,7 +373,7 @@
                         </div><!-- Bank-info -->
 
                         <div id="pictures" class="tab-pane"> <!-- change password-->
-                            sdf
+                            comming soon
                         </div>
                     </div>
                 </div>
