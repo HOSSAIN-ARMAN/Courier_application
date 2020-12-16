@@ -27,6 +27,9 @@ Route::prefix('admin')->group(function (){
     Route::get('/logout', 'Auth\AdminLoginController@logout')->name('admin.logout');
 });
 
+require_once __DIR__ . '/admin/parcel-request.php'; //manage parcel request
+
+
 
 //route binding for parcel
 require_once __DIR__ . '/merchent/dashboard.php';  //for merchent dashboard

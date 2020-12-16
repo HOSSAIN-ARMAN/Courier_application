@@ -22,11 +22,6 @@ class ParcelController extends Controller
     {
         $this->middleware('auth:merchent');
 
-//        $parceles = Merchent\Parcel::paginate(15);
-//        View::share([
-//            'parceles' => $parceles,
-//        ]);
-
     }
 
     /**
@@ -77,29 +72,12 @@ class ParcelController extends Controller
         Merchent\Customer::insert($customerInfo);
     }
 
-    private function dataWithoutDeliveryTypeId($request, $merchentId, $invoiceNo){
-        $parcelInfo = array(
-            'merchent_id'  => $merchentId,
-            'parcel_type_id' => $request->parcel_type_id,
-            'delivery_type_id' => $request->delivery_type_id,
-            'pick_up_zone_id' => $request->pick_up_zone_id,
-            'weight' => $request->weight,
-            'price' => $request->price,
-            'delivery_fee' => $request->delivery_fee,
-            'amount' => $request->amount,
-            'cod_charge' => $request->cod_charge,
-            'pickup_number' => $request->pickup_number,
-            'pick_up_address' => $request->pick_up_address,
-            'status' => $request->status,
-            'invoice_no' => $invoiceNo
-        );
-        return $parcelInfo;
-    }
+
     private function data($request, $merchentId, $invoiceNo){
         $parcelInfo = array(
             'merchent_id'  => $merchentId,
             'parcel_type_id' => $request->parcel_type_id,
-            'delivery_type_id' => $request->delivery_type_id,
+            'delivery_type_id' => $request->parcel_type_id == 2 ? 2 : $request->delivery_type_id,
             'pick_up_zone_id' => $request->pick_up_zone_id,
             'weight' => $request->weight,
             'price' => $request->price,
@@ -134,14 +112,19 @@ class ParcelController extends Controller
                 'pick_up_zones.name as pickUpZoneName'
             )->get();
 
-//       dd($parceles);
-
         return view('merchent.parcel.detail',[
             'parceles' => $parceles,
         ]);
     }
-    public function display(){
-        return "nice";
+    public function getDeliveryTypeName($id){
+        if ($id){
+//            $count = Delivery::count();
+//            $skip = 1;
+//            $limit = $count - $skip; // the limit
+//            $data = Delivery::skip($skip)->take($limit)->where('parcel_type_id', $id)->get();
+            $data = Delivery::where('parcel_type_id', $id)->get();
+            return response()->json($data);
+        }
     }
     public function show($id)
     {

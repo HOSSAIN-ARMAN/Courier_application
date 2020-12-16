@@ -1,3 +1,12 @@
+<?php
+
+if (Auth::check()){
+    $id = auth('merchent')->id();
+    $merchent = \App\Merchent::where('id', $id)->first();
+}
+
+?>
+
 <div id="navbar" class="navbar navbar-default ace-save-state bg-dark">
     <div class="navbar-container ace-save-state" id="navbar-container">
 
@@ -30,13 +39,12 @@
 
                 <li class="light-blue dropdown-modal">
                     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-{{--                        <img class="nav-user-photo" src="{{asset(auth()->user()->image)}}" alt="{{auth()->user()->name}}">--}}
-                        @if(auth('merchent')->id())
+                        @if(Auth::check())
 
-                            @if(isset($merchent->image))
+                            @if(isset($merchent->image) )
                                 <img class="nav-user-photo" src="{{ asset($merchent->image) }}">
                             @else
-                                <img class="nav-user-photo" src="{{ Auth::user()->image }}">
+                                <img class="nav-user-photo" src="{{ asset('assets/images/defult-img/admin-default-img.png') }}">
                             @endif
                         @else
                         <img class="nav-user-photo" src="{{ asset('assets/images/defult-img/admin-default-img.png') }}">
